@@ -25,7 +25,7 @@ public class ReqresAPITestingPathAndQueryParameter {
 		
 		//path parameter
 			
-		Response resSecond = RestAssured.given().when().param("id", 2).get("api/user");
+		Response resSecond = RestAssured.given().when().pathParam("id", 2).get("api/user/{id}");
 		
 		System.out.println(resSecond.getStatusCode());
 		
